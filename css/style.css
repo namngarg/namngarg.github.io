@@ -71,15 +71,28 @@ body {
   flex-shrink: 0;
 }
 
-/* On mobile/tablet (below the lg column split), show the profile photo
-   before the text block instead of the default source order. */
-@media (max-width: 63.9375rem) {
-  .hero-photo {
-    order: -1;
-    margin-bottom: 1rem;
+/* Hero layout: on mobile this is just a plain stack in source order
+   (intro -> photo -> chips). From the lg breakpoint up, switch to the
+   two-column layout with the chips sitting under the intro text and
+   the photo spanning both rows on the right, matching the desktop design. */
+.hero-grid {
+  display: grid;
+}
+@media (min-width: 64rem) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-areas:
+      "intro photo"
+      "chips photo";
   }
-  .hero-text {
-    order: 2;
+  .hero-intro {
+    grid-area: intro;
+  }
+  .hero-chips {
+    grid-area: chips;
+  }
+  .hero-photo {
+    grid-area: photo;
   }
 }
 
