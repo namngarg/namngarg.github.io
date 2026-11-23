@@ -113,7 +113,7 @@ body {
     order: initial;
     justify-content: flex-end;
     align-self: center;
-    margin-top: -2.5rem;
+    margin-top: -5rem;
   }
   /* Bigger, portrait-shaped photo on desktop instead of a small square. */
   .hero-photo-frame {
