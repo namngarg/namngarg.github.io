@@ -113,6 +113,17 @@ body {
     order: initial;
     justify-content: flex-end;
   }
+  /* Bigger, portrait-shaped photo on desktop instead of a small square. */
+  .hero-photo-frame {
+    width: 22rem;
+    height: 29rem;
+  }
+}
+@media (min-width: 80rem) {
+  .hero-photo-frame {
+    width: 24rem;
+    height: 31rem;
+  }
 }
 
 .eyebrow {
