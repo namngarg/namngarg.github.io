@@ -110,9 +110,7 @@ body {
    the text instead of needing the full desktop size. */
 @media (max-width: 63.9375rem) {
   .hero-photo {
-    align-self: start;
     justify-self: end;
-    margin-top: 0.25rem;
   }
   .hero-photo-frame {
     width: clamp(5.5rem, 30vw, 11rem);
