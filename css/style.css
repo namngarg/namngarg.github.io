@@ -71,6 +71,18 @@ body {
   flex-shrink: 0;
 }
 
+/* On mobile/tablet (below the lg column split), show the profile photo
+   before the text block instead of the default source order. */
+@media (max-width: 63.9375rem) {
+  .hero-photo {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+  .hero-text {
+    order: 2;
+  }
+}
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
