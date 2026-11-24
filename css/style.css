@@ -11,6 +11,47 @@ body {
   color: #05070c;
 }
 
+/* custom cursor — desktop pointer devices only */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 999px;
+  }
+  .cursor-dot {
+    height: 6px;
+    width: 6px;
+    background: #2dd4bf;
+  }
+  .cursor-ring {
+    height: 34px;
+    width: 34px;
+    border: 1.5px solid #2dd4bf88;
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .cursor-ring.is-hovering {
+    width: 56px;
+    height: 56px;
+    border-color: #38bdf8;
+    background: rgba(45, 212, 191, 0.08);
+  }
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
